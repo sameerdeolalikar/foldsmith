@@ -77,7 +77,11 @@ python3 -m unittest discover -s tests -v
 
 Tests cover the closed cut perimeter, shared fold edges, fractional dimensions,
 invalid inputs, physical SVG units, page fitting, and output-file protection.
-GitHub Actions also checks installation on Python 3.11–3.13.
+A GitHub Actions template for tests and installation on Python 3.11–3.13 lives in
+`ci/github-actions-tests.yml`. It is not active: the publishing credential does
+not have GitHub's workflow permission. A maintainer with that permission can move
+it to `.github/workflows/tests.yml` to enable CI. The initial local test run used
+Python 3.14; other versions have not yet been verified by CI.
 
 - `foldsmith/geometry.py`: physical net and edge classification.
 - `foldsmith/svg.py`: sheet fitting, print instructions, and SVG rendering.
